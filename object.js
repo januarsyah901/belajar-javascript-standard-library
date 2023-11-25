@@ -1,5 +1,5 @@
 function info(params) {
-    console.info(params);
+  console.info(params);
 }
 // object freeze
 {
@@ -9,9 +9,9 @@ function info(params) {
   };
 
   Object.freeze(name); // agar ga bisa diotak atik lagi
-//   Object.seal(name) // bisa diotak atik tapi ga bisa dihapus ataupun ditambah
+  //   Object.seal(name) // bisa diotak atik tapi ga bisa dihapus ataupun ditambah
 
-  name.firstName = "wahid"; //tidak berubah 
+  name.firstName = "wahid"; //tidak berubah
 
   delete name.lastName; //tidak berubah
 
@@ -19,15 +19,14 @@ function info(params) {
 }
 // object assign
 {
-  const target = {firstName : "nabil"}
-  const source = {lastName : "fikry",firstName : "wahid"}
+  const target = { firstName: "nabil" };
+  const source = { lastName: "fikry", firstName: "wahid" };
 
-  info(Object.assign(target,source)); //object target akan mengambil object source , dan jika ada property yang sama maka akan ditimpa
+  info(Object.assign(target, source)); //object target akan mengambil object source , dan jika ada property yang sama maka akan ditimpa
 }
 // object property nama and value
 {
-  const name = {firstName : "januarsyah",lastName : "akbar"};
+  const name = { firstName: "januarsyah", lastName: "akbar" };
   info(Object.values(name)); // dapat nilainya aja
-  info(Object.getOwnPropertyNames(name)); //  dapat property 
-
+  info(Object.getOwnPropertyNames(name)); //  dapat property
 }
